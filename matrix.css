@@ -1,0 +1,185 @@
+body,
+items-center,
+text-center,
+li.p-3,
+div.flex,
+div.pl-3,
+form.pt-2,
+div.text-xs,
+div.w-full.border-b,
+button.btn.btn-neutral,
+button.rounded-full {
+	background: black;
+	font-family: monospace;
+	color: #31c527;
+
+}
+
+/* chat icon */
+div.p-1.rounded-sm.items-center {
+	background-color: none !important
+}
+
+
+div.items-center table {
+	color: #31c527;
+}
+
+div.items-center table tr,
+table thead,
+table th,
+table td {
+	color: #31c527;
+	border-color: #31c527
+}
+
+/* code section */
+pre div.flex.items-center.text-xs {
+	background: #102c11;
+}
+
+pre div.p-4.overflow-y-auto {
+	background: #0b1c0b;
+}
+
+/**
+div.items-center div.w-full.group{
+    background: #0a1c10;
+}
+**/
+/* phrases when explaining code */
+.prose :where(code):not(:where([class~=not-prose] *)) {
+	color: #2cb1c7 !important;
+}
+
+.prose:where(code):not(:where([class~=not-prose] *)) {
+	color: #2cb1c7 !important;
+}
+
+/* table header colors */
+
+.prose :where(thead th):not(:where([class~=not-prose] *)) {
+	color: #2cb1c7 !important;
+}
+
+
+div.absolute.bottom-0 {
+
+	background: black;
+}
+
+/**
+div.text-base {
+    border: 1px solid;
+    padding: 12px;
+    border-radius: 4px;
+}
+**/
+
+/* chat input */
+div.flex.flex-col.w-full.py-2 {
+	background: black;
+}
+
+
+div.right-0 {
+	display: none
+}
+
+button.p-3:hover,
+button.btn.btn-neutral:hover,
+button.rounded-full:hover,
+button.rounded-md:hover {
+	background: #0d2e0e;
+}
+
+
+text-center,
+li.p-3,
+div.pl-3,
+button.rounded-md,
+button.rounded-full {
+	border: 1px solid;
+}
+
+
+body,
+input,
+button,
+button.p-3,
+h2,
+h1,
+div.inset-y-0,
+div.right-0 {
+	color: #31c527;
+	background: black;
+}
+
+a.text-sm,
+.text-sm {
+	color: #31c527;
+	font-size: 1rem;
+}
+
+blockquote,
+dd,
+dl,
+fieldset,
+figure,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+hr,
+p,
+pre,
+button.text-gray-500 {
+	color: #31c527;
+}
+
+.markdown ol li,
+.markdown ol li>p,
+.markdown ol ol,
+.markdown ol ul,
+.markdown ul li,
+.markdown ul li>p,
+.markdown ul ol,
+.markdown ul ul {
+	color: #31c527;
+}
+
+/* @media (min-width: 768px) .md\:bg-vert-light-gradient {
+	background-image: unset;
+} */
+
+nav.h-full {
+	border-right: 1px solid;
+}
+
+
+.rain-drop {
+	position: absolute;
+	top: 0;
+	width: 1rem;
+	writing-mode: vertical-lr;
+	text-orientation: upright;
+	white-space: nowrap;
+	background: linear-gradient(transparent 10%, #008F11 50%, #00FF41 96%, white 3rem);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	filter: drop-shadow(1px 1px 1px #008F11);
+	font-weight: bold;
+	opacity: 0.35;
+	transition: 1s;
+	cursor: default;
+}
+
+.fade-out {
+	opacity: 0;
+}
+
+div.items-start.text-center {
+	z-index: 10;
+}
