@@ -1,5 +1,3 @@
-
-
 function makeItRain(timeDelayToStart = (10 * 1000)) {
     const characters = `日ﾊﾐﾋｰｳｼﾅﾓﾆｻﾜﾂｵﾘｱﾎﾃﾏｹﾒｴｶｷﾑﾕﾗｾﾈｽﾀﾇﾍｦｲｸｺｿﾁﾄﾉﾌﾔﾖﾙﾚﾛﾝ0123456789Z"'=:.+<>|_ç`;
     const length = 100;
@@ -61,14 +59,22 @@ chrome.storage.sync.get(["chatStyle"]).then((result) => {
 });
 
 const changeStyle = (newStyle) => {
-    if (newStyle === "none") {
-        document.getElementsByTagName("head")[0].removeChild(styleLink);
+    if (newStyle === "none" && styleLink) {
+        try {
+            document.getElementsByTagName("head")[0].removeChild(styleLink);
+        } catch (er) {
+            console.log(er)
+        }
         styleLink = null;
-        const collection = document.querySelector('div.items-center').getElementsByClassName("rain-drop");
-        collection.forEach(element => {
-            element.style.display = "none"
-        });
-    
+   
+        try {
+            const collection = document.querySelector('div.items-center').getElementsByClassName("rain-drop");
+            collection?.forEach(element => {
+                element.style.display = "none"
+            });
+        } catch (er) {
+            console.log(er)
+        }
     } else if (!styleLink && (!newStyle || newStyle === "matrix" || typeof newStyle === 'object')) {
         styleLink = document.createElement("link");
         styleLink.href = chrome.runtime.getURL("matrix.css");

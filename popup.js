@@ -1,4 +1,3 @@
-
 document.addEventListener('DOMContentLoaded', function() {
     chrome.storage.sync.get(["chatStyle"]).then((result) => {
         console.log('result',result)
@@ -19,9 +18,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
        
     });
-
-
-  
 });
 
 const setChatStyle = (newStyle) => {
